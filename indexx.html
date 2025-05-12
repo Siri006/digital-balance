@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digital Balance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode">
+
+  <header>
+    <h1>📱 Digital Balance</h1>
+    <button id="modeToggle">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="usage-box green">
+      <h2>Today's Usage</h2>
+      <p><strong>3 hours 20 minutes</strong></p>
+    </section>
+
+    <section class="alert-box red">
+      <h3>🚨 Limit Reached!</h3>
+      <p>You’ve been using your phone too long. Time to take a break!</p>
+    </section>
+
+    <section class="tip-box">
+      <h3>💡 Tip of the Day</h3>
+      <p>Try 15 minutes of screen-free time every hour.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created with ❤️ for digital wellbeing</p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById("modeToggle");
+    const body = document.body;
+
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      body.classList.toggle("light-mode");
+      toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    });
+  </script>
+</body>
+</html>
